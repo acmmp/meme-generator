@@ -1,1 +1,132 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --primary-color: #3a86ff;
+    --secondary-color: #4ecdc4;
+    --accent-color: #ff6b6b;
+    --background-color: #f7f7f7;
+    --text-color: #333333;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 1rem;
+    line-height: 1.5;
+    font-size: 14px;
+  }
+  
+  .app-container {
+    max-width: 800px;
+    margin: 1rem auto;
+    background-color: #ffffff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem;
+  }
+  
+  /* Meme Options Styles */
+  .meme-options-container {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  input[type="file"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px dashed var(--primary-color);
+    border-radius: var(--border-radius);
+    background-color: rgba(58, 134, 255, 0.05);
+    cursor: pointer;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #e0e0e0;
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+  }
+  
+  input[type="text"]:focus {
+    border-color: var(--primary-color);
+    outline: none;
+  }
+  
+  button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  button:hover {
+    background-color: #45b7aa;
+  }
+  
+  /* Meme Canvas Styles */
+  .canvas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  canvas {
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .canvas-container button {
+    background-color: var(--accent-color);
+  }
+  
+  .canvas-container button:hover {
+    background-color: #ff5252;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .app-container {
+      padding: 1rem;
+    }
+    
+    input[type="file"],
+    input[type="text"],
+    button {
+      font-size: 0.8rem;
+    }
+  }
+  
+  /* Additional Professional Touches */
+  .meme-options-container::before,
+  .canvas-container::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: var(--primary-color);
+    margin-bottom: 0.75rem;
+  }
+  
+  .app-container::after {
+    content: '© 2023 Meme Generator';
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.7rem;
+    color: #999;
+  }

@@ -1,0 +1,14 @@
+/* meme-options.component.css */
+.meme-options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  input[type="file"],
+  input[type="text"],
+  button {
+    padding: 10px;
+    font-size: 16px;
+  }
+  

@@ -1,0 +1,10 @@
+<!-- meme-options.component.html -->
+<div class="meme-options-container">
+    <input type="file" (change)="onFileSelected($event)" accept="image/*" />
+    
+    <input type="text" [(ngModel)]="topText" placeholder="Texto superior" />
+    <input type="text" [(ngModel)]="bottomText" placeholder="Texto inferior" />
+    
+    <button (click)="generateMeme()">Generar Meme</button>
+  </div>
+  

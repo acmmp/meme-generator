@@ -1,13 +1,25 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { MemeOptionsComponent } from './meme-options/meme-options.component';
+import { MemeCanvasComponent } from './meme-canvas/meme-canvas.component';
+
+interface Meme {
+  imageUrl: string;
+  topText: string;
+  bottomText: string;
+}
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [CommonModule, MemeOptionsComponent, MemeCanvasComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'meme-generator';
+  meme: Meme = { imageUrl: '', topText: '', bottomText: '' };
+
+  updateMeme(newMeme: Meme): void {
+    this.meme = { ...newMeme };
+  }
 }
