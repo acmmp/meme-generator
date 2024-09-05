@@ -123,7 +123,7 @@
   }
   
   .app-container::after {
-    content: '© 2024 Adrian Campayo';
+    content: '© 2024 Adrian Campayo ';
     display: block;
     text-align: center;
     margin-top: 1rem;
